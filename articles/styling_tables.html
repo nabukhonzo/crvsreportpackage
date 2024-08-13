@@ -117,89 +117,27 @@ containing optional footnotes and source notes</li>
 </h2>
 <p>We have some summary data for Table 3.11 from the <a href="https://www.vitalstrategies.org/resources/production-of-a-vital-statistics-report/" class="external-link">Vital
 Strategies report template</a>.</p>
-<table class="table">
-<thead><tr class="header">
-<th align="left">fert_age_grp</th>
-<th align="right">total</th>
-<th align="right">proportion</th>
-<th align="right">adjusted_total</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">&lt;15</td>
-<td align="right">2</td>
-<td align="right">0.000</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">15-19</td>
-<td align="right">239</td>
-<td align="right">0.048</td>
-<td align="right">250</td>
-</tr>
-<tr class="odd">
-<td align="left">19-24</td>
-<td align="right">1088</td>
-<td align="right">0.218</td>
-<td align="right">1140</td>
-</tr>
-<tr class="even">
-<td align="left">25-20</td>
-<td align="right">1596</td>
-<td align="right">0.319</td>
-<td align="right">1673</td>
-</tr>
-<tr class="odd">
-<td align="left">30-34</td>
-<td align="right">1298</td>
-<td align="right">0.260</td>
-<td align="right">1360</td>
-</tr>
-<tr class="even">
-<td align="left">35-39</td>
-<td align="right">640</td>
-<td align="right">0.128</td>
-<td align="right">671</td>
-</tr>
-<tr class="odd">
-<td align="left">40-44</td>
-<td align="right">124</td>
-<td align="right">0.025</td>
-<td align="right">130</td>
-</tr>
-<tr class="even">
-<td align="left">45-49</td>
-<td align="right">12</td>
-<td align="right">0.002</td>
-<td align="right">13</td>
-</tr>
-<tr class="odd">
-<td align="left">50+</td>
-<td align="right">1</td>
-<td align="right">0.000</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">Unknown</td>
-<td align="right">240</td>
-<td align="right">NA</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">Total</td>
-<td align="right">5240</td>
-<td align="right">1.000</td>
-<td align="right">5240</td>
-</tr>
-</tbody>
-</table>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 11 × 4</span></span></span>
+<span><span class="co">#&gt;    fert_age_grp total proportion adjusted_total</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> &lt;15              2      0                  2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 15-19          239      0.048            250</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 19-24         <span style="text-decoration: underline;">1</span>088      0.218           <span style="text-decoration: underline;">1</span>140</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 25-20         <span style="text-decoration: underline;">1</span>596      0.319           <span style="text-decoration: underline;">1</span>673</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 30-34         <span style="text-decoration: underline;">1</span>298      0.26            <span style="text-decoration: underline;">1</span>360</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 35-39          640      0.128            671</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 40-44          124      0.025            130</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 45-49           12      0.002             13</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 50+              1      0                  0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Unknown        240     <span style="color: #BB0000;">NA</span>                  0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> Total         <span style="text-decoration: underline;">5</span>240      1               <span style="text-decoration: underline;">5</span>240</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="simple-table">Simple table<a class="anchor" aria-label="anchor" href="#simple-table"></a>
 </h2>
 <p>The default <strong>gt</strong> table can be created using the <a href="https://gt.rstudio.com/reference/gt.html" class="external-link"><code>gt()</code></a>
 function. It is a simple table with <strong>4</strong> columns.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">gt</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
 <div id="mwlefoodfi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#mwlefoodfi table {
@@ -741,7 +679,7 @@ this step if unnecessary.</p>
 <p>We can also make additional styling improvements by re-positioning
 the stubhead label, formatting it as bold and setting the stub
 width.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># create a column of row names</span></span>
 <span>  <span class="fu">gt</span><span class="op">(</span>rowname_col <span class="op">=</span> <span class="st">"fert_age_grp"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -1294,7 +1232,7 @@ assigned ‘fert_age_grp’ to the stub.</p>
 <p>If you wanted to create row groups you can use the <a href="https://gt.rstudio.com/reference/tab_row_group.html" class="external-link"><code>tab_row_group()</code></a>
 function. Suppose we wanted to combine ‘40-44’, ‘45-49’, and ‘50+’ to
 create a ‘40+’ group.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_row_group</span><span class="op">(</span></span>
 <span>    label <span class="op">=</span> <span class="st">"40+"</span>,</span>
@@ -1310,7 +1248,7 @@ create a ‘40+’ group.</p>
 </h2>
 <p>To customise the column labels we can use the <a href="https://gt.rstudio.com/reference/cols_label.html" class="external-link"><code>cols_label()</code></a>
 function.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">cols_label</span><span class="op">(</span></span>
 <span>    total <span class="op">=</span> <span class="st">"Number of births"</span>,</span>
@@ -1861,7 +1799,7 @@ function can be used to target the column labels and apply styling. Here
 we use the <a href="https://gt.rstudio.com/reference/cells_column_labels.html" class="external-link"><code>cells_column_labels()</code></a>
 location helper function to left-align and format the column labels as
 bold.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_style</span><span class="op">(</span></span>
 <span>    style <span class="op">=</span> <span class="fu">cell_text</span><span class="op">(</span>align  <span class="op">=</span> <span class="st">"right"</span>, weight <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
@@ -2412,7 +2350,7 @@ to specify whole numbers with thousands separators for the ‘total’ and
 ‘adjusted_total’ columns. The function <a href="https://gt.rstudio.com/reference/fmt_percent.html" class="external-link"><code>fmt_percent()</code></a>
 converts values of ‘proportion’ into a percentage with one decimal
 place.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">fmt_number</span><span class="op">(</span>columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"total"</span>, <span class="st">"adjusted_total"</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fmt_percent</span><span class="op">(</span>columns <span class="op">=</span> <span class="st">"proportion"</span>, decimals <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
@@ -2961,7 +2899,7 @@ columns to span.</p>
 <p>We can style the spanner column labels using <code>tab_style()</code>
 and the <a href="https://gt.rstudio.com/reference/cells_column_spanners.html" class="external-link"><code>cells_column_spanners()</code></a>
 location helper function.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_spanner</span><span class="op">(</span></span>
 <span>    label <span class="op">=</span> <span class="st">"Unadjusted"</span>,</span>
@@ -3532,7 +3470,7 @@ Here we have used markdown to format the title in bold.</p>
 <p>The table headings are centred by default but you can change the
 alignment to either “left” or “right” using the <a href="https://gt.rstudio.com/reference/opt_align_table_header.html" class="external-link"><code>opt_align_table_header()</code></a>
 function.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_header</span><span class="op">(</span></span>
 <span>    <span class="co"># style title using markdown</span></span>
@@ -4100,7 +4038,7 @@ function.</p>
 allows you to add source information to a table. It is possible to style
 the text with either Markdown (<code>md()</code>) or HTML
 (<code>html()</code>).</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_source_note</span><span class="op">(</span></span>
 <span>    source_note <span class="op">=</span> <span class="fu">md</span><span class="op">(</span><span class="st">"*Source*: CRVS system"</span><span class="op">)</span></span>
@@ -4671,7 +4609,7 @@ using <code>location</code>. The footnote text can be styled using
 a location helper function. For example, we have supplied the <a href="https://gt.rstudio.com/reference/cells_column_spanners.html" class="external-link"><code>cells_column_spanners()</code></a>
 location helper function to <code>tab_footnote()</code> to target a
 particular spanner column label: ‘Adjusted’.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_footnote</span><span class="op">(</span></span>
 <span>    footnote <span class="op">=</span> <span class="st">"Births were adjusted for missing values on age of mother"</span>,</span>
@@ -5249,7 +5187,7 @@ dagger, double dagger etc. You can alternatively opt for ‘numbers’,
 location helper functions to style any part of the table. Here we will
 format the ‘Total’ <a href="https://gt.rstudio.com/reference/cells_stub.html" class="external-link"><code>cells_stub()</code></a>
 row label in bold.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">tab_style</span><span class="op">(</span></span>
 <span>    style <span class="op">=</span> <span class="fu">cell_text</span><span class="op">(</span>weight <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
@@ -5824,7 +5762,7 @@ function to specify a specific typeface.</p>
 function has nearly 200 different styling options for the whole table.
 We have picked a few below to match the table style in the <a href="https://www.vitalstrategies.org/resources/production-of-a-vital-statistics-report/" class="external-link">Vital
 Strategies report template</a></p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">opt_table_font</span><span class="op">(</span>font <span class="op">=</span> <span class="fu">google_font</span><span class="op">(</span><span class="st">"Montserrat"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">tab_options</span><span class="op">(</span></span>
@@ -6412,7 +6350,7 @@ Strategies report template</a></p>
 </h2>
 <p>We can bundle this table styling into a theme so that we can reuse it
 in a single function.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">vs_theme</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">tbl</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu">opt_table_font</span><span class="op">(</span>font <span class="op">=</span> <span class="fu">google_font</span><span class="op">(</span><span class="st">"Montserrat"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -6433,7 +6371,7 @@ in a single function.</p>
 <span>      <span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 <p>This can then be applied as:</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">vs_theme</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -6441,7 +6379,7 @@ in a single function.</p>
 <h2 id="full-code">Full code<a class="anchor" aria-label="anchor" href="#full-code"></a>
 </h2>
 <p>We can combine all the different parts of the code together.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tbl</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># Rows</span></span>
 <span>  <span class="fu">gt</span><span class="op">(</span>rowname_col <span class="op">=</span> <span class="st">"fert_age_grp"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -6508,7 +6446,7 @@ in a single function.</p>
 <p>Once we are happy with our table we can export it.
 <strong>gt</strong> provide a number of different output options
 including Word and PDF.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># to a PNG</span></span>
 <span><span class="va">tbl</span> <span class="op">|&gt;</span> <span class="fu">gtsave</span><span class="op">(</span><span class="st">"gt_table_3_11.png"</span>, expand <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
 <span></span>
