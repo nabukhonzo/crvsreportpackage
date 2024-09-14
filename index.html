@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">crvsreportpackage</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,11 +36,8 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/data_cleaning.html">Data cleaning</a></li>
-    <li><a class="dropdown-item" href="articles/data_mapping.html">Mapping variables to outputs</a></li>
+<li><a class="dropdown-item" href="articles/data_mapping.html">Mapping variables to outputs</a></li>
     <li><a class="dropdown-item" href="articles/table_templates.html">CRVS tables</a></li>
-    <li><a class="dropdown-item" href="articles/styling_tables.html">Creating publication-ready tables</a></li>
-    <li><a class="dropdown-item" href="articles/choropleth_maps.html">Creating choropleth maps</a></li>
   </ul>
 </li>
       </ul>
@@ -69,47 +66,42 @@
 <!-- badges: start -->
 
 <div class="section level2">
-<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+<h2 id="overview-and-documentation">Overview and Documentation<a class="anchor" aria-label="anchor" href="#overview-and-documentation"></a>
 </h2>
-<p>This package contains some useful functions to create a crvs report.</p>
+<p>This package contains some useful functions to create a Civil Registration Vital Statistics report.</p>
+<p>The documentation for the package is available in website format on the link that should be highlighted on the main page of the repository on the top right.</p>
 </div>
 <div class="section level2">
 <h2 id="simple-installation-and-basic-usage">Simple installation and Basic Usage<a class="anchor" aria-label="anchor" href="#simple-installation-and-basic-usage"></a>
 </h2>
-<p>In order to use the <code>crvsreportpackage</code> with your data, you will need to follow these straight forward commands. First, install the package from the GitHub repo:</p>
+<p>In order to use the <code>crvsreportpackage</code> as part of your pipeline with your data, you will need to follow these straight forward commands:</p>
 <div class="section level3">
-<h3 id="install-and-load-the-devtools-package">Install and Load the devtools Package<a class="anchor" aria-label="anchor" href="#install-and-load-the-devtools-package"></a>
+<h3 id="id_1-install-and-load-the-devtools-package">1) Install and Load the <code>devtools</code> Package<a class="anchor" aria-label="anchor" href="#id_1-install-and-load-the-devtools-package"></a>
 </h3>
-<p>Install and load the devtools package if you haven’t already.</p>
+<p>Install and load the <code>devtools</code> package if you haven’t already. This will let you install packages from GitHub directly.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="install-the-crvsreportpackage-package-from-github">Install the <code>crvsreportpackage</code> Package from GitHub<a class="anchor" aria-label="anchor" href="#install-the-crvsreportpackage-package-from-github"></a>
+<h3 id="id_2-install-the-crvsreportpackage-package-from-github">2) Install the <code>crvsreportpackage</code> Package from GitHub<a class="anchor" aria-label="anchor" href="#id_2-install-the-crvsreportpackage-package-from-github"></a>
 </h3>
-<p>Use the install_github() function from the devtools package to install the package. You need to provide the repository address in the format username/repository.</p>
+<p>Use the <code>install_github()</code> function from the <code>devtools</code> package to install. You need to provide the repository address in the format username/repository.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tech-acs/crvsreportpackage"</span><span class="op">)</span></span></code></pre></div>
-<p>During this installation, you will be asked to install some required packages that are used within <code>crvsreportpackage</code>. This might take a minute or two.</p>
+<p>During this installation, you will be asked to install some required packages so that the <code>crvsreportpackage</code> works correctly, this might take a few minutes. You might get some errors if your <code>R</code> installation is old or there are some necessary package updates, usually the messages on the Console are descriptive.</p>
 </div>
 <div class="section level3">
-<h3 id="use-the-crvsreportpackage-in-your-script">Use the <code>crvsreportpackage</code> in your Script<a class="anchor" aria-label="anchor" href="#use-the-crvsreportpackage-in-your-script"></a>
+<h3 id="id_3-use-the-crvsreportpackage-package-in-your-script">3) Use the <code>crvsreportpackage</code> Package in your Script<a class="anchor" aria-label="anchor" href="#id_3-use-the-crvsreportpackage-package-in-your-script"></a>
 </h3>
 <p>Once you have installed the package, here is a basic example of how to use <strong>crvsreportpackage</strong>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">crvspackage</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Example Usage</span></span>
-<span><span class="va">age_grp_80</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/derive_age_groups.html">derive_age_groups</a></span><span class="op">(</span><span class="va">ageinyrs</span>,</span>
-<span>                                        start_age <span class="op">=</span> <span class="fl">5</span>, max_band <span class="op">=</span> <span class="fl">80</span>,</span>
+<span><span class="va">age_grp_80</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/derive_age_groups.html">derive_age_groups</a></span><span class="op">(</span><span class="va">ageinyrs</span>, start_age <span class="op">=</span> <span class="fl">5</span>, max_band <span class="op">=</span> <span class="fl">80</span>,</span>
 <span>                                        step_size <span class="op">=</span> <span class="fl">5</span>, under_1 <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
-</div>
-<div class="section level2">
-<h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
-</h2>
-<p>The documentation for the package is available in the website link that should be highlighted on the main page of the repository on the top right.</p>
 </div>
 <div class="section level2">
 <h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
@@ -119,16 +111,16 @@
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
 </h2>
-<p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.html">License</a> file for more details on what you can and can’t do with this code.</p>
 </div>
 <div class="section level2">
 <h2 id="authors">Authors<a class="anchor" aria-label="anchor" href="#authors"></a>
 </h2>
 <ul>
-<li>Pamela Kakande - Contributor and Maintainer - GitHub profile</li>
+<li>Pamela Kakande - Contributor and Maintainer</li>
 <li>Tesfaye Belay - Contributor and Maintainer - <a href="https://github.com/tbelay" class="external-link">GitHub profile</a>
 </li>
-<li>Rachel Shipsey - Contributor - GitHub profile</li>
+<li>Rachel Shipsey - Contributor</li>
 <li>Liam Beardsmore - Initial work - <a href="https://github.com/beardl-ons" class="external-link">GitHub profile</a>
 </li>
 <li>Henry Partridge (ONS) - Contributor - <a href="https://github.com/rcatlord" class="external-link">GitHub profile</a>

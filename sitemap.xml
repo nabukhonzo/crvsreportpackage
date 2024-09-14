@@ -5,12 +5,9 @@
 <url><loc>https://tech-acs.github.io/crvsreportpackage/LICENSE-text.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/LICENSE.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/PULL_REQUEST_TEMPLATE.html</loc></url>
-<url><loc>https://tech-acs.github.io/crvsreportpackage/articles/choropleth_maps.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/articles/crvsreportpackage.html</loc></url>
-<url><loc>https://tech-acs.github.io/crvsreportpackage/articles/data_cleaning.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/articles/data_mapping.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/articles/index.html</loc></url>
-<url><loc>https://tech-acs.github.io/crvsreportpackage/articles/styling_tables.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/articles/table_templates.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/authors.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/index.html</loc></url>
@@ -20,6 +17,7 @@
 <url><loc>https://tech-acs.github.io/crvsreportpackage/reference/construct_empty_var.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/reference/construct_leading_groups.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/reference/construct_timeliness.html</loc></url>
+<url><loc>https://tech-acs.github.io/crvsreportpackage/reference/construct_weight_group.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/reference/construct_year.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/reference/convert_config_args.html</loc></url>
 <url><loc>https://tech-acs.github.io/crvsreportpackage/reference/convert_csv_xlsx.html</loc></url>

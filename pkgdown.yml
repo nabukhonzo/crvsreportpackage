@@ -2,13 +2,10 @@ pandoc: 3.1.11
 pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
-  choropleth_maps: choropleth_maps.html
   crvsreportpackage: crvsreportpackage.html
-  data_cleaning: data_cleaning.html
   data_mapping: data_mapping.html
-  styling_tables: styling_tables.html
   table_templates: table_templates.html
-last_built: 2024-09-12T21:59Z
+last_built: 2024-09-14T14:26Z
 urls:
   reference: https://tech-acs.github.io/crvsreportpackage/reference
   article: https://tech-acs.github.io/crvsreportpackage/articles
