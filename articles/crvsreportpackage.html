@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Introduction to crvsreportpackage • crvsreportpackage</title>
+<title>Set Up Guide • crvsreportpackage</title>
 <script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to crvsreportpackage">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Set Up Guide">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -34,7 +34,8 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/data_mapping.html">Mapping variables to outputs</a></li>
+<li><a class="dropdown-item" href="../articles/developer_manual.html">Developer Manual</a></li>
+    <li><a class="dropdown-item" href="../articles/data_mapping.html">Mapping variables to outputs</a></li>
     <li><a class="dropdown-item" href="../articles/table_templates.html">CRVS tables</a></li>
   </ul>
 </li>
@@ -64,7 +65,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
-      <h1>Introduction to crvsreportpackage</h1>
+      <h1>Set Up Guide</h1>
                         <h4 data-toc-skip class="author">UNECA</h4>
             
             <h4 data-toc-skip class="date">September 2024</h4>
@@ -83,81 +84,51 @@ the creation of CRVS reports from record level data. It will produce
 tables in line with the best practice for CRVS reports.</p>
 </div>
 <div class="section level2">
-<h2 id="developer-installation">Developer Installation<a class="anchor" aria-label="anchor" href="#developer-installation"></a>
+<h2 id="simple-installation-and-basic-usage">Simple installation and Basic Usage<a class="anchor" aria-label="anchor" href="#simple-installation-and-basic-usage"></a>
 </h2>
-<p>If you want to develop the package, you may want to consider cloning
-the repository and following the steps below to have the correct
-environment to improve the package. First, install the
-<code>crvsreportpackage</code> from GitHub, then ensure all package
-dependencies are correctly managed and installed using
-<code>renv</code>:</p>
-<p>1.__Clone the repository__:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/tech-acs/crvsreportpackage.git</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="bu">cd</span> crvsreportpackage</span></code></pre></div>
-<p>2.__Initialize the <code>renv</code> environment__: Upon first
-entering the package directory, <code>renv</code> will activate the
-specific package environment defined for <code>crvsreportpackage</code>.
-You need to run the following R commands to restore the required
-packages:</p>
+<p>In order to use the <code>crvsreportpackage</code> as part of your
+pipeline with your data, you will need to follow these straight forward
+commands:</p>
+<div class="section level3">
+<h3 id="install-and-load-the-devtools-package">1) Install and Load the <code>devtools</code> Package<a class="anchor" aria-label="anchor" href="#install-and-load-the-devtools-package"></a>
+</h3>
+<p>Install and load the <code>devtools</code> package if you haven’t
+already. This will let you install packages from GitHub directly.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="install-the-crvsreportpackage-package-from-github">2) Install the <code>crvsreportpackage</code> Package from
+GitHub<a class="anchor" aria-label="anchor" href="#install-the-crvsreportpackage-package-from-github"></a>
+</h3>
+<p>Use the <code>install_github()</code> function from the
+<code>devtools</code> package to install. You need to provide the
+repository address in the format username/repository.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"renv"</span><span class="op">)</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/restore.html" class="external-link">restore</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>This will read the <code>renv.lock</code> file which contains the
-dependencies and install the correct versions of all required
-packages.</p>
-<p>3.__Install the package__: Once the environment is set up, you can
-install the package using:</p>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tech-acs/crvsreportpackage"</span><span class="op">)</span></span></code></pre></div>
+<p>During this installation, you will be asked to install some required
+packages so that the <code>crvsreportpackage</code> works correctly,
+this might take a few minutes. You might get some errors if your
+<code>R</code> installation is old or there are some necessary package
+updates, usually the messages on the Console are descriptive.</p>
+</div>
+<div class="section level3">
+<h3 id="use-the-crvsreportpackage-package-in-your-script">3) Use the <code>crvsreportpackage</code> Package in your
+Script<a class="anchor" aria-label="anchor" href="#use-the-crvsreportpackage-package-in-your-script"></a>
+</h3>
+<p>Once you have installed the package, here is a basic example of how
+to use <strong>crvsreportpackage</strong>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>By following these steps, you will ensure that you have all the
-necessary dependencies and the correct versions installed, allowing
-<code>crvsreportpackage</code> to function as intended. It will also
-mean you can now open the project and develop the package further.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">crvspackage</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example Usage</span></span>
+<span><span class="va">age_grp_80</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/derive_age_groups.html">derive_age_groups</a></span><span class="op">(</span><span class="va">ageinyrs</span>, start_age <span class="op">=</span> <span class="fl">5</span>, max_band <span class="op">=</span> <span class="fl">80</span>,</span>
+<span>                                        step_size <span class="op">=</span> <span class="fl">5</span>, under_1 <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level2">
-<h2 id="maintenance">Maintenance<a class="anchor" aria-label="anchor" href="#maintenance"></a>
-</h2>
-<p>Once you have made significant changes to the package, it might be
-worth considering changing the package version. This can be done in the
-DESCRIPTION file, bumping up the <code>Version</code> variable. In order
-to rebuild and update the <code>crvsreportpackage</code> after making
-some changes to the functions in it follow these steps:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Remove the installed version of the package</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html" class="external-link">remove.packages</a></span><span class="op">(</span><span class="st">"crvsreportpackage"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Clear your R environment</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span>list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Restart R session (do this manually or with RStudio shortcut Ctrl+Shift+F10)</span></span>
-<span></span>
-<span><span class="co"># Initialize renv if not already done</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="st">"renv"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html" class="external-link">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"renv"</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/renv/" class="external-link">renv</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Restore the environment</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/restore.html" class="external-link">restore</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Update the lockfile</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/snapshot.html" class="external-link">snapshot</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Recreate documentation and rebuild the package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span>
-<span><span class="fu">document</span><span class="op">(</span><span class="op">)</span>  <span class="co"># Generates the NAMESPACE file and documentation using roxygen2</span></span>
-<span><span class="fu">build</span><span class="op">(</span><span class="op">)</span>     <span class="co"># Builds the package</span></span>
-<span><span class="fu"><a href="https://rstudio.github.io/renv/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="op">)</span>   <span class="co"># Installs the package</span></span></code></pre></div>
-<p>After these steps the package should be installed with the latest
-changes to the functions. This should mean the package is in the right
-state to be updated on the online repo.</p>
-<p>Before you make any big changes, double check that all the unit test
-are working as expected, by running them manually:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">testthat</span><span class="fu">::</span><span class="fu"><a href="https://testthat.r-lib.org/reference/test_dir.html" class="external-link">test_dir</a></span><span class="op">(</span><span class="st">"tests/testthat"</span><span class="op">)</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="data-included-in-the-package">Data Included in the Package<a class="anchor" aria-label="anchor" href="#data-included-in-the-package"></a>
+<h2 id="sample-data-included-in-the-package">Sample Data Included in the Package<a class="anchor" aria-label="anchor" href="#sample-data-included-in-the-package"></a>
 </h2>
 <p>The package has four test datasets, one for each of:</p>
 <ul>
@@ -172,16 +143,6 @@ function.</li>
 </ul>
 <p>This test data should also serve as a good tool in order to test
 existing features or develop new ones.</p>
-</div>
-<div class="section level2">
-<h2 id="further-reading">Further Reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
-</h2>
-<p><a href="https://r-pkgs.org/" class="external-link">R packages</a> by Hadley Wickham and
-Jenny Bryan is the canonical guide to R package development.</p>
-<p>The <a href="https://psyteachr.github.io" class="external-link">PsyTeachR</a> Coding Club
-at the University of Glasgow School of Psychology &amp; Neuroscience
-also have some really <a href="https://psyteachr.github.io/intro-r-pkgs/" class="external-link">helpful resources</a>
-(a book, YouTube videos) on building R packages.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
