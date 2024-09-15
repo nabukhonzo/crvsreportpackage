@@ -124,11 +124,18 @@ mean you can now open the project and develop the package further.</p>
 <div class="section level3">
 <h3 id="maintenance">Maintenance<a class="anchor" aria-label="anchor" href="#maintenance"></a>
 </h3>
-<p>Once you have made significant changes to the package, it might be
-worth considering changing the package version. This can be done in the
-DESCRIPTION file, bumping up the <code>Version</code> variable. In order
-to rebuild and update the <code>crvsreportpackage</code> after making
-some changes to the functions in it follow these steps:</p>
+<p>Once you have made significant changes to the package, there are
+several steps that you will need to do:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Run the tests</label></li>
+<li><label><input type="checkbox">Make sure documentation (like code
+structure and other web docs) are updated</label></li>
+<li><label><input type="checkbox">Increase the package version. In the
+DESCRIPTION file, bump-up the <code>Version</code>
+variable.</label></li>
+<li><label><input type="checkbox">Update the automated materials using
+the instructions below:</label></li>
+</ul>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Remove the installed version of the package</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html" class="external-link">remove.packages</a></span><span class="op">(</span><span class="st">"crvsreportpackage"</span><span class="op">)</span></span>
@@ -213,14 +220,17 @@ is identified by their start, usually with verb that informs what the
 function goal is. These are:</p>
 <ul>
 <li>
-<code>contruct_</code>: These will create a new variable based on
-existing data.</li>
+<code>contruct_</code>: These will construct a new variable or data
+for analysis.</li>
 <li>
-<code>create_</code>: These will take the data and create a
-table.</li>
+<code>create_</code>: These will create a table by taking some
+data.</li>
 <li>
 <code>handle_</code>: These will handle some of the adjacent
 processes.</li>
+<li>
+<code>plot_</code>: These will help with the visualisation of the
+tables or data.</li>
 </ul>
 </div>
 <div class="section level3">
