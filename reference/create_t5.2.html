@@ -9,7 +9,7 @@ and the sex of the deceased."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">crvsreportpackage</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,7 +94,7 @@ and the sex of the deceased.</p>
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>Variables needed per record:</p>
 <p>- `dodyr`: Year of death.</p>
-<p>- `death2o`: Region of death.</p>
+<p>- `death2o`: Region of usual residence.</p>
 <p>- `death2c`: Sex of the deceased.</p>
     </div>
 
@@ -103,9 +103,6 @@ and the sex of the deceased.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">death_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="construct_sample_death_data.html">construct_sample_death_data</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">death_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="construct_year.html">construct_year</a></span><span class="op">(</span><span class="va">death_data</span>, date_col <span class="op">=</span> <span class="st">"death1a"</span>, year_col <span class="op">=</span> <span class="st">"dodyr"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">table_5_2</span> <span class="op">&lt;-</span> <span class="fu">create_t5.2</span><span class="op">(</span><span class="va">death_data</span>, date_var<span class="op">=</span><span class="st">"dodyr"</span>, data_year <span class="op">=</span> <span class="fl">2022</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in create_t5.2(death_data, date_var = "dodyr", data_year = 2022):</span> object 'death2o' not found</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html" class="external-link">View</a></span><span class="op">(</span><span class="va">table_5_2</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'table_5_2' not found</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
