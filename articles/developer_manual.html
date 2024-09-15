@@ -168,6 +168,44 @@ working as expected, by running them manually:</p>
 <code class="sourceCode R"><span><span class="fu">testthat</span><span class="fu">::</span><span class="fu"><a href="https://testthat.r-lib.org/reference/test_dir.html" class="external-link">test_dir</a></span><span class="op">(</span><span class="st">"tests/testthat"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
+<h3 id="codebase-structure">Codebase Structure<a class="anchor" aria-label="anchor" href="#codebase-structure"></a>
+</h3>
+<p>The repository contains a lot more than just some functions.
+Understanding what each folder or section does is important in order to
+make changes in the future or to triage any potential issues that may
+emerge. The diagram below gives some information on the codebase
+structure:</p>
+<pre><code>📦crvsreportpackage 
+┣ 📂.github                           # Contains instructions for GitHub
+┃ ┣ 📂workflows                       # Contains workflows for GitHub Actions
+┃ ┃ ┣ 📜R-CMD-chek.yml                # Automatically runs the tests
+┃ ┃ ┗ 📜pkgdown.yaml                  # Automatically builds the website
+┃ ┗ 📜PULL_REQUEST_TEMPLATE.md        # Adds a checklist for new Pull Requests
+┣ 📂R                                 # Contains the R functions
+┣ 📂docs                              # AUTOMATED documents built for the web
+┣ 📂inst                              # Contains the sample data
+┣ 📂man                               # AUTOMATED information on R functions
+┣ 📂renv                              # AUTOMATED information on dependencies 
+┣ 📂scripts                           # Contains useful scripts for maintenance
+┃ ┣ 📜create_test_data.R              # Will generate synthetic data
+┃ ┗ 📜update_description.R            # Will update the description and dependencies
+┣ 📂tests                             # Contains the tests for the R folder
+┣ 📂vignettes                         # Contains the explanatory articles
+┣ 📜.Rbuildignore                     # Contains exceptions for package build
+┣ 📜.Rprofile                         # Contains instructions for dependencies
+┣ 📜.gitignore                        # Handles exceptions to GitHub upload
+┣ 📜CODE_OF_CONDUCT.md                # Information on how to behave
+┣ 📜CONTRIBUTING.md                   # Guidance on how to contribute to the code
+┣ 📜DESCRIPTION                       # Metadata for the package
+┣ 📜LICENSE                           # AUTOMATED package conditions of use
+┣ 📜LICENSE.md                        # Detailed package conditions of use
+┣ 📜NAMESPACE                         # AUTOMATED details of package functions
+┣ 📜README.md                         # Introduction article on the package
+┣ 📜_pkgdown.yml                      # Structure of the website
+┣ 📜crvsreportpackage.Rproj           # AUTOMATED set-up for R Project
+┗ 📜renv.lock                         # AUTOMATED information on dependencies</code></pre>
+</div>
+<div class="section level3">
 <h3 id="further-reading">Further Reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h3>
 <p><a href="https://r-pkgs.org/" class="external-link">R packages</a> by Hadley Wickham and
