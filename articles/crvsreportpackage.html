@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">crvsreportpackage</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.5</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.6</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,7 +123,7 @@ to use <strong>crvsreportpackage</strong>:</p>
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">crvspackage</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Example Usage</span></span>
-<span><span class="va">age_grp_80</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/derive_age_groups.html">derive_age_groups</a></span><span class="op">(</span><span class="va">ageinyrs</span>, start_age <span class="op">=</span> <span class="fl">5</span>, max_band <span class="op">=</span> <span class="fl">80</span>,</span>
+<span><span class="va">age_grp_80</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/construct_age_groups.html">construct_age_groups</a></span><span class="op">(</span><span class="va">ageinyrs</span>, start_age <span class="op">=</span> <span class="fl">5</span>, max_band <span class="op">=</span> <span class="fl">80</span>,</span>
 <span>                                        step_size <span class="op">=</span> <span class="fl">5</span>, under_1 <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -132,13 +132,13 @@ to use <strong>crvsreportpackage</strong>:</p>
 </h2>
 <p>The package has four test datasets, one for each of:</p>
 <ul>
-<li>Birth data: Use the <code><a href="../reference/read_sample_birth_data.html">read_sample_birth_data()</a></code>
+<li>Birth data: Use the <code><a href="../reference/construct_sample_birth_data.html">construct_sample_birth_data()</a></code>
 function.</li>
-<li>Death data: Use the <code><a href="../reference/read_sample_death_data.html">read_sample_death_data()</a></code>
+<li>Death data: Use the <code><a href="../reference/construct_sample_death_data.html">construct_sample_death_data()</a></code>
 function.</li>
-<li>Marriages data: Use the <code><a href="../reference/read_sample_marriage_data.html">read_sample_marriage_data()</a></code>
-function.</li>
-<li>Divorce data: Use the <code><a href="../reference/read_sample_divorce_data.html">read_sample_divorce_data()</a></code>
+<li>Marriages data: Use the
+<code><a href="../reference/construct_sample_marriage_data.html">construct_sample_marriage_data()</a></code> function.</li>
+<li>Divorce data: Use the <code><a href="../reference/construct_sample_divorce_data.html">construct_sample_divorce_data()</a></code>
 function.</li>
 </ul>
 <p>This test data should also serve as a good tool in order to test
