@@ -50,7 +50,14 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">create_t5.1</span><span class="op">(</span><span class="va">data</span>, num_yrs <span class="op">=</span> <span class="fl">5</span>, tablename <span class="op">=</span> <span class="st">"Table_5_1"</span>, output_path <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">create_t5.1</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  <span class="va">est_data</span>,</span>
+<span>  <span class="va">pops</span>,</span>
+<span>  num_yrs <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  tablename <span class="op">=</span> <span class="st">"Table_5_1"</span>,</span>
+<span>  output_path <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -59,6 +66,14 @@
 
 <dl><dt id="arg-data">data<a class="anchor" aria-label="anchor" href="#arg-data"></a></dt>
 <dd><p>deaths data frame</p></dd>
+
+
+<dt id="arg-est-data">est_data<a class="anchor" aria-label="anchor" href="#arg-est-data"></a></dt>
+<dd><p>estimate data frame</p></dd>
+
+
+<dt id="arg-pops">pops<a class="anchor" aria-label="anchor" href="#arg-pops"></a></dt>
+<dd><p>population data frame</p></dd>
 
 
 <dt id="arg-num-yrs">num_yrs<a class="anchor" aria-label="anchor" href="#arg-num-yrs"></a></dt>
@@ -76,8 +91,11 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">t5.1</span> <span class="op">&lt;-</span> <span class="fu">create_t5.1</span><span class="op">(</span><span class="va">dth_data</span>, tablename <span class="op">=</span> <span class="st">"Table_5_1"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'dth_data' not found</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">death_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="construct_sample_death_data.html">construct_sample_death_data</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">estim_death_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="construct_sample_estim_death_data.html">construct_sample_estim_death_data</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">sample_pop_estim</span> <span class="op">&lt;-</span> <span class="fu"><a href="construct_sample_pop_estim.html">construct_sample_pop_estim</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">death_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="construct_year.html">construct_year</a></span><span class="op">(</span><span class="va">death_data</span>, date_col <span class="op">=</span> <span class="st">"death1a"</span>, year_col <span class="op">=</span> <span class="st">"dodyr"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">table_5_1</span> <span class="op">&lt;-</span> <span class="fu">create_t5.1</span><span class="op">(</span>data <span class="op">=</span> <span class="va">death_data</span>, est_data <span class="op">=</span> <span class="va">estim_death_data</span>, pops <span class="op">=</span> <span class="va">sample_pop_estim</span>, tablename <span class="op">=</span> <span class="st">"Table_5_1"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
