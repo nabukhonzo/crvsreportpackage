@@ -6,7 +6,7 @@
 
 ## Overview and Documentation
 
-This package contains some useful functions to create a Civil Registration
+This package contains some useful functions to create a Civil Registration and
 Vital Statistics report.
 
 The documentation for the package is available in website format on the link
@@ -47,7 +47,7 @@ Once you have installed the package, here is a basic example of how to use
 __crvsreportpackage__:
 
 ```r
-library(crvspackage)
+library(crvsreportpackage)
 
 # Example Usage
 age_grp_80 <- construct_age_groups(ageinyrs, start_age = 5, max_band = 80,
